@@ -204,7 +204,7 @@ function vcCreateDialog() {
   s.position = "fixed";
   s.top = 0;
   s.left = 0;
-  s.width = "200px";
+  s.width = "400px";
   s.zIndex = 255;
   s.border = "1px solid black";
   s.backgroundColor = "#fbfcfd";
@@ -245,7 +245,7 @@ function vcCreateDialog() {
   };
   s = passElt.style;
   s.position = "relative";
-  s.width = "345px";
+  s.width = "145px";
   s.padding = "5px";
   s.margin = "5px 0 10px 0";
   s.fontFamily = "monospace";
