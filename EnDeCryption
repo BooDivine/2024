@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZWB1SZNFM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-JZWB1SZNFM');
+    </script>
+      
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h2>Encryption and Decryption</h2>
+    <hr>
+    <form name="key" onsubmit="return false;">
+      <h4>Key</h4>
+      <p>
+        <input type="text" name="text" id="passwordText">
+        <br>
+        <input type="button" value="Random" onclick="document.key.text.value = randomPassword(4);">
+      </p>
+    </form>
+    <hr>
+    <form name="plain" onsubmit="return false;">
+      <h4>Plain Text</h4>
+      <p>
+        <textarea name="text" id="plainText"></textarea>
+        <br>
+        <input type="button" name="encrypt" value="Encrypt" onclick="encryptFormText();">
+      </p>
+    </form>
+    <hr>
+    <form name="cipher" onsubmit="return false;">
+      <h4>Cipher Text</h4>
+      <p>
+        <textarea name="text" id="cipherText"></textarea>
+        <br>
+        <input type="button" name="decrypt" value=" Decrypt " onclick="decryptFormText();">
+      </p>
+    </form>
+    <hr>
+    
+    <form name="encryptedCode" onsubmit="return false;">
+      <h4>HTML Code</h4>
+      <p>
+        <textarea name="text" id="codeText" rows="10" wrap="off" readonly="" onclick="this.focus(); this.select();"></textarea>
+        <br>
+        <input type="radio" name="codeType" value="hide" checked onclick="genSampleCode();"> Standard
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="codeType" value="show" onclick="genSampleCode();"> Inline
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="codeType" value="show" onclick="genSampleCode();"> ***
+      </p>
+    </form>
+    
+    <h4>HTML Test</h4>
+    <div id="encryptedTest">&nbsp;</div>
+    
+    <hr>
+    <p>source
+      <br>http://www.vincentcheung.ca/jsencryption/
+    </p>
+    
+  </body>
+</html>
