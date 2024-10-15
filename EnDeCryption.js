@@ -245,7 +245,7 @@ function vcCreateDialog() {
   };
   s = passElt.style;
   s.position = "relative";
-  s.width = "145px";
+  s.width = "345px";
   s.padding = "5px";
   s.margin = "5px 0 10px 0";
   s.fontFamily = "monospace";
