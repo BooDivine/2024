@@ -1,0 +1,548 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZWB1SZNFM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-JZWB1SZNFM');
+    </script>
+      
+    <title>中醫處方用藥解析</title>
+    <script type="text/javascript" src="https://boodivine.github.io/2024/EnDeCryption.js"></script>
+    
+    <style>
+      .dialogue {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0 0 10px #000;
+        background-color: #f4f5f7;
+        border-radius: 20px;
+      }
+      .user {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        .avatar {
+          width: 60px;
+          text-align: center;
+          flex-shrink: 0;
+        }
+        .pic {
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            vertical-align: middle;
+          }
+        }
+        .name {
+          color: #333;
+        }
+        .text {
+          background-color: #aaa;
+          padding: 16px;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+      .remote {
+        .text {
+          margin-left: 20px;
+          margin-right: 80px;
+          color: #eee;
+          background-color: #4179f1;
+          &::before {
+            border-right: 10px solid #4179f1;
+            left: -10px;
+          }
+        }
+      }
+      .local {
+        justify-content: flex-end;
+        .text {
+          margin-right: 20px;
+          margin-left: 80px;
+          order: -1;
+          background-color: #fff;
+          color: #333;
+          &::before {
+            border-left: 10px solid #fff;
+            right: -10px;
+          }
+        }
+      }
+      .remote,
+      .local {
+        & .text::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+        .text {
+          font-weight: 300;
+          box-shadow: 0 0 10px #888;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">黃蓮的功效</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="kFdATzpO" title="U2FsdGVkX19JYZxJlIgEwMXJi6Vg3Ae2ZQB4DN0+3I4jKCgZYOAnVddlURuIQ3Gka1w2wz0OtAM8Uv4C+k6xmANu+RwgTyWkSk2S3nRGz4me0Ffo6O/F3DZBBb1zIQcfjHqsGnNZsrhkac/Ew6aRDDpWektUWXyyBQd245Dk2iTiNGoSqsgkc+bnDgWd34HFDlGbc/WklmipBODkWiI6foIcanneyBurWICEaCUdu6ZRrPuxyeFs2qogIzso6obS1okhIyQJd+VWTJXeaodxBsHZmKy489Y3tidAb1gNl2it0J2ru/Si+j1mQHWcxTGPagRZ2Vrmz6hO/QvPbm3hGpuWLNV4L/pfdet/7SpERJjkfOZsbyU/a3RAw/9sq2jNTupU+9+vbELZTmjc5wMr8c50D8x6CDr24OirprGM80VXfS43F9O5BbbeRlw0LFW3jKarrY+FBj+0YpUo5TZ7Thzd6uoiKEbKq7HpxXbEO86P1zHaoLqThaJJ7mRHU04ZAyPG9H4Te50AiLkMX3CYjyAerA87iJsny/YZU4YkzYR4LLb4sBwj4NMVtLdBqc+1FE/n5r3qR1SEViDjLtm8kkY1Cl3oOx0/hk9q3YIXuuz61SMP+eJxrxFtsn5g3OToG2stfUG2pRl6m5dis0gq7g8qE4oE3lXM/d4tcIrETzaSd8/Z8zxMhEGmaP4uB2O+6lCixNwW85KnZzPY9yasRViSCnhYieXDRv+Z1AEpqCkaV9Ezazorm/HCQnOIn//kN6FZoA6b8/f0GLvh8yG8J3LVKkUwelbGTX7W5Ym6FFn7tdTpwBDERk5BX9WLYdaPKST08Lm27mObjqlMFRp0ABui/OknQPJG1QCohmGRfE96DRBp9srlmz19+j9LmjYJ/RjSLeJNa8trSCOS2016eHbcOH9L3eX1KFOa3zjpdZ/obAWNkFvoGydlofxoyZAWm+nlVHFMGxlXR3MOFxXY9lVtw+noi3YAAhXFQfek67eoyLMtYtRKkwqHxAuPmqKqQSRT0/Uvsyuv0npl1GAtxhy1q2GXWDyIgP7ROREFndMTU7lCzrKEuQICu/Fpi+cY">
+            	<a href="javascript:decryptText('kFdATzpO')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">如果告訴你中藥處方內容，你可以判斷出大概是什麼病情嗎？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="dBpJtY3F" title="U2FsdGVkX183j0t2U23D6dhwKPYENvVcBjbk74rSg30Pn+9ATCsAqE1IKQ4HeX7rVCIQicAwgHvNjqkq0NeCktCj3drCAZLaM/OZ1uyxqr/wJQE5sO3tS3nFQ5t+eVigWC0N0uEQnQcYZC58Dxw3OQtAjLQ1E/6OYD4ZwfTdvTxPYi54d23Q+QVQzIHdIZoThBdw+TiirUYdvYtoQMJXzZ/5jfB0Knp6vTp+3SYREvHxZXxJBMQAZosKmheY6YGOavVR65XXfPECc4iwEdVKcSKcmLkiPgGOmlx2ZPfJ+kl6CGfkzy5jcyQh6Ljh3BbVmvb2C3mDUJ+G6jKROr5jC1zPYpybJ0HZxf7MwGZFV+lNzgKourSAvXWarQuO6n1yfYm3K4b7FkGQouwYMSVADw==">
+            	<a href="javascript:decryptText('dBpJtY3F')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">半夏瀉心湯 2克 旋覆代赭石湯 2克 香砂六君子湯 2克</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="cM9N62MI" title="U2FsdGVkX1+ROdqXlgmSvjNFdYAby4V0aGoQyRIf8vt3N6XMq8SRY306cKjhPxWpA1GI5uYrC2g5swNEYk2NCbAReIAezpRpDOvKsRL5F2VusSLE/a39FhyqtqR/0yGlD/XpH+BviORbrbByzJaonPm640qKBnQjqDWbC9zWBJ1PZXtCAllO7kUXO+IjLznM+FYnAybkrhCbMK+KN7NlBucMvjCEmNwir+zRzzvsZP0yOjDiZZDx65rsuQWt0uTaTquJiLSEG+qh8061UF9Nu8uKQQhdfORQsxWa/Rr0OxsfZ6ZreC8CxvbA0HSbT0G1qZ9S6nVDrrSYypxmxtMiMCbkp4lOUIqmFhwLeNVtFDH+UEWDB+jspbcz+xxF1xoYkwx9Ik+skgv0FxJrJ7C6l6QQkQppFobCGQ8BhGk/l5b0q0n+3LDD69SzIkCbsxbuqzrux5s4GLkvEBbNrFrwMJx6u5a9PUX7csoJSduI0wIT+SlPt/lWN5WSyA803DxdzzYCU1apES16NsMew8w/4PQc0YIvf6Y9tCjJAqzhiBgjWWmWfUAVoe+TyOD7me+Xpkxd5qeptjFYtWYrxCAAeO53ZEMgcWupxWLrbig7f1MaRYDeU/xao2jXuMAmP++CyOoivhUpsIA9kvLcEBKtpp7vYAe9s/pd/BRaMMpXbRlUL2ohIWGK5KlK5GvamWPyQ5K+blL2OXTQ4C6Qu1Ck6JNUa68JlFodPjQDzW9lFyEaKdQX0oQbi/tW0/LgE/yWd58p49vamxlMvannuK8wa9Q5z71P+rgtbwdIshy81QGTrC2qMrmvqVJC8VuW9VOFuYKKEUMXdHTfSW/6yxv55dc2PwiUNfCN8wEJZPlvYUk0nI6eTs9nGTUpXeEoljYSVQiaBXXyPDbPOXbS+EX1jV8lu6gbHA0TU+CT16x0filUOCN+sLXAoN1w6//3FkEXltsXE1U511nbIE3IJlHRUifsDVNaBka4dCPH9klITHrARq7COm/rPFRiSO+IJLjpP1gHlv6jnWQb7C924OjSsR4MYHSRUJSKW+e2kcn42wBO7vdTjJzsXNw0I0q8EHkw">
+            	<a href="javascript:decryptText('cM9N62MI')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+    
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">半夏瀉心湯 旋覆代赭石湯 香砂六君子湯 龍膽瀉肝湯 真人活命飲 連翹 薏苡仁 黃蓮 靈芝</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="FEVAnLm7" title="U2FsdGVkX19BkaSQTerPD58G26cM5K8Jfg5ybwwdWmOOAque6ZTwbaunM5noxglMKFYAlKyH4ziIrnOA50kvUvXBDS6vsQjfKeZ/pDss9Bvx/ENMeD9n4Ev9/DqjcuzQrhFy/P/ecoknhqJq2JsT+WGuzRi6rrSTpOq4FlTYYYUhLSunleL1RKvGVtqBMjJyH+IVBDAiDQmrBwhsGrMeqU8x8NCqJYYZnvw5qm1rsKEtR5YDhLRKJGDfFaepjNpLNRKtzFGtdClPc4fiHUIDHM4QkUNCcFoiWml3L57Nvios8vnFLDhRbKHaFS0X1lH3Q1oqaeO5zruxaXwLjCthfmr0SRY0a1dlavQItEdDszhMUqBc0/kf91IpaxNQGtaQjGu7/I7yLwpIRqWd5X6UYT0T0xxSV2INCNGjDr/m147n+54cYLLhPS+Wz+4RYZgzGlyE++jzz1+Zl1joNL/oB3dO77ASujZxLlm6Pti25YLt7gDm1E6eDXq74CeGb8j+8tNTNEXYTY64/y4IZQThME6yeobj9hWrhde+z8/n4H/6xvb7DfIDoRldvI/G8RPMTXTYPXKZIRmTHZnK+S1rEmiZ6KQfGLtgC9XAXYrAC3gdj1nfWsF1oJWb/J4b6DZ2o6MnlGB8Qp4LHhLTBeicQ4X7SsO4xlPQy0lqeRSBJxUMeDL8sboPAHT8a8u6CcpMAbjpnbgJv0lFsac0RKnd8z5rpUu0SOVkpWJQdz+nPKoG7lk9sE1nRuU6G5GP9eXlsHaKJdTgtMByyzQs76bck/kBE5KKyqLKe1+PSqpJhLM5ph8zRhBjc9p+f12deTAnKgxNxuQx8JJQHuDirc0TobRzAHohJHQRgXZ8qP4KevvjVhNLZjJjllkk9HSzfrTh4dexUzw7JmLZFKlt5pUSg58o1uXYp7osDXzBuyvU6cmT4+4MqRnj636OIp4R9APct9gKL+7g22HqaWZf/CXT8r0X4PHUVtJcvEvpbaSYj2uVl2IWJZDsJqS80mJUOeJIBw0zEGEHwB1ISbR9V19Gl4kF1Ha27Z+ce1Lped8hqdX79pSmpqr5L4vSt644uhUGr5qvom4j/T/tp4VIRy0GIMoyfc8lrJppVzvxt2wXW9Yi4fWelu0tM6giEnU8n/MvXk23lCL+Ay7m8s7frrPS5dL7uoL8zU0/c2rc67gf9fsvEwM6H7bx4z1MU+HdY4PdcHZ4lkEo88FNivlxakLxlCbnkVXq7n2EM1SMls2D7DGELBSg37mZs77ITXqn13QdztfEhwHW8eZGjg+exrpLaQWrix2Zz/stnYTWQ4MieJAPAK74bWLRqqnlnCS6EeGfPONwjFh+2R+EW9XJwZCNR/YDxCF0lp0SYsjp839cO+Jgx+lNYrsWh7CufIohM2Wu2tKBFyseQhe61ZqJOfh0emo+BkHNd9f9FJeBxtHLXcW/GdlwLmdfIQnnPZYt09SPlGVJjeRhRPJ7z60DuCPn8+K03K3OnaoBWjiRaLDGWFk1gG89EscErF4XXpFv4vzmlr5du8LwYSs3O5bx9N87bVfYYI2LgKFZEoQd3mnpdGsvinDaCTVDXePYZGzI/IiYN7EM02ZTTVfwcYP5K5PBk9BtlZF+9Vpcbdo1jy2BrKZlMts27GAYk7hQmmBnKa/uU2FRjTbwnJ7MTfKmfIGHn6vhbd80RlrANQhniYhoP6U4nPJaW4lBIX8X5/EM3/vXWKlZFhHgDNAvB+5whRP/t1pzKWrDwZxOE/HZDFhKN1b6OrnUpkdVClLA90WF0dPzXn42VoHqwic+oFv8Ul19QqqBlm19KOQZB3o1QEICLk4N9cp/9HHdu6Ko8Zid23r6hJv7vWTn+0jGbrqH8S8vJw1Ck7gAsLeVEgUvrYOaGTpg7MxkqZaag4+DabmnY3N7QHu6YAFnvzL4UhAMSPZEyAhDPoeBoiRaNba9RuBV0YE=">
+            	<a href="javascript:decryptText('FEVAnLm7')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">天王補心丹</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="h2yApzog" title="U2FsdGVkX1/VOaZM2gZM/R/RM6JI8IjgkLVMRUGori/DyhX3mBtDkWXkYadxMg64A50SHzSF/JtUNGQJtAQDOqw31G/kDHM0FXI4nawpgoW5Dsz58MmBhTBN5MkQ+s6ICer46/4W3f1g5MpggBI/aCCV88PuSLz95CGPgPCkDI9kV0YNAQPoaVpRX9L4Unh6f0nd08mar6amcuTEf+xqGi41CKUfYaWruMmY+ujTcZNcHsX2aOCf+E1HcKZ1+IXbYiqL1W41dEI8sJlyBgCiJoaDT9V3RsAKkNx2kmgS6Tb7ELDuQI8NzWObaeXGm3CJ5TK3L2mRFWUOXsYM1Y5rV9afCmmBsyiuhGKA4z3Uc6DD91+iSi2qVpUOHubv0vX4phwGx03pTYmMAjAtyUAG0+Gy+WEkeNBA5ARbE16Ehtz8chP860WRFfTc8gewpekfN9Qso2p/GTS3cmFZ/TaTMFdmz3LVh0zELaRDl4QvUnKj6OAMgrEo25M1HyBniC/h/JPCInpOP6JeE4Dflua2Spe3zlc9Y9kWQVV5hqocku+Zl+uk47k9lRZNOWLqxCvdLeEBtQI7mub4ECxpZe+6PbygYwH4R7obZdQmrKNba4VYiam8fl4iChp7zgcpYMO7c3H0gq/D1qHqXQ7ZlsdNeIWYmaP52kubUEAgAX9Erlm4CcLbc/pBYtBOQ79nGuWd4xWSgOiIsVIUvkiYYwXTAjAR4lr7UkAtHIriOq1Jw9Eu5UjaAE7U1/pgcwHM8Ssk6jYuBckFATWY72l9NWzjYywNiO/L+UmeaI1dDI9L3fe+gXM9/FGOziHrZT8fqi2K+0CuZJyIwXZTl9T6nXfZk6L9LmaUOOmV40pZK/6bYK4qPX6D7M6tC51U6j4EglSPVHsYP9z2eJ6fxEXxv3dfIBQN6JtFO4maxYM3egxevLGPCYswQEVQP/z4X5pb260kBVCfW1jluCwYuiPX4m3XWOGn+Smde1fZiHBt6317tHPqtBl5plyy7NulX6Ap/Pf7/T3BM7m/W8qcKpiFpGOHNzO1sgv+Y4Y/V/frSm1Lq2YJVrwPoI8K9RPIXAQHP5MCuRHLJG8K1Xy5U9BTVx4LJpq/V9d4LNFu60E02DwL1gsalh7sHON2rBUqhV+q1i7Ac0Ly5i/rffMYJ39xo0w2xzNSHVYZWwWO4qUp3QN/WSqvsjiEFdJEeUZSS6s6UiXgNm1Bypry4Z4CJw/RCnUsRcuWT33lVrymfczdjoPqpC2Y99zZqWBbSyjkoKC0jf4M">
+            	<a href="javascript:decryptText('h2yApzog')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">天王補心丹 歸脾湯 龍膽瀉肝湯 甘麥大棗湯 六味地黃丸 百合 生地黃</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="uvA2Geza" title="U2FsdGVkX1/ivuhMCXURgGQS3/UYSnMODQYllrGQ8Da7/HZFLhh4a1/ns28UqkVfxOwtfe931yRShW7ye0Wy+N9WEy7g4scqM2Jr0X1KtM+Jqyf/gtAxZtFS3OOrza8ck9r/3uYEQ62D/RXSQDcZ60lbXbbRgc5zVdGgBJt0ORaoiJw3igezR/nOSaXAqEQbHTGRskQ8LDYKISv/sUvCxnMqzgghWHcPLI7x0sK+I4UMT/9CMehg8gNJhkgjMMNXogmboQ0tGS2qEL5S0UNTDp1V5soONlOPQoPibWa1/F79EB0w9qqTwL2s+6Ay1oT9JJue2IuQfsY81mJojFk5kSNWk416EoYyDaOPV6YeEIJ+4vrJFYy++9NSpJ86//FUZs/gDRswstMj8U6gQqY+LbMUDDcEcQ/bZpVG65nFDnyEymqvYdfmc/5Ji6e1U8i9tQf/OOc8VDCC0kLP0aorYgr6KHKvSUFLGB3xWF4K99WWA0L0Yyb/Mw8XLwzYjmwtZnZgqaHxUF/VvZd6L6vqqedVaRS4fTiYclDREP355Fs2Q16A2sD8Pz+nRFKmhx1p5vxP0a3ywqvtaBncbhMvOTvpA6UbvS/QGb95LUSQ3lqXo5Yv0UQC7vEKZX+MrFN3PKNrhM2PHRTY5+eG+yJTgquNbAIsUPKpDDhmrv9GZqskSUsd5j7NZk//HxFGvh9q0IAk1z1EcVUlTe5xwGYxI/mWsy1tR2/Tuic/DMbkS278D/uAkSl1eGgenhDyutk7nTQqLpSaJZ0SlaLZnMUt4EDTrxdpxvyIBatAJARix9g27uvc3UrCTVMWBu870UwVRjcsfAbeIx6ZKar9qgr/JSZEhZn+c9hps2nHMD6mIphVGC2R+hmX+9BtJldwDXbZEHuPGnnErEJdcqVtYXvk2Sv0SpJKBcpPikzqV8JoirnmKp5AQHf1oImqDq0G8HfusSScwrO5PtGHv5Vrnn7AK4bIYcqnDHOxxenFVXCcusrRIsFsFJJdr4nCluW3nml66JLOtrzAE8vU2yX0G0LZglb485NC8GB5ARte1uLEcBv4JmOGFSxgfG+lr+qaQh2rYTU+xQ/50lgh94vr9JEc6/Cv74K0Z+b/2hIYPvyvv5esPajCYp5PFX0wQWiDrvdbqsd4rAzlBmrpamfrZnWDo/p2DuXx9CUmE0qKK1Wv1Ic0GfdaVAyoMVMElbkU/5UvsP1KHgjPTpDu2zBBsa3/woBqVMOlr8rrrws9h0fhrWV4m05213KMzpmd8/2EsBLVI9QPOWY5rO+3V6x1u871JxzWFL3mpK9Dl4K8HUzXo7Zi5G0XHmMLe8WJbKqNLggkWcjQPH/BDFmlVyZtYs8Sy1RuaBCRnxkV6qHr/QB3MDDR3y9uVEF7G2ytHWKKuip93hkTydbQbshBrLgckf6V5fwIOUqxXxEeMwSjelXeIxShv5lHRcEFGI9v/s9X8poZa7jZVVUfyPeTfKV/PfzKJnHxe3lYrKlFLnzMTKLD9O7dIBcQQ4okKmKUW3YIJjsAHMkf9M+TlqWBlnRv4Lb6Wtkm6a0jrw1aGzMepiI6u99vHReyTMbE82j5Istt7fEH9BJDkSEYXCBva3+yjDiH3h9DhQbUrXVhh+vQtoy8yG/jzFORVP87Kr/4k+9QKalLkwdMwznaowDyPVGT9UeY5LP1PWwZiLb3nSGqGSWVyjsInEXkICTTAe36H310WtAmFbmIgpqtiJ1ltFcakjuJ0A==">
+            	<a href="javascript:decryptText('uvA2Geza')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">你覺得綜合以上的藥材，判斷可能的病情，除了透過藥物改善，可以怎麼從日常生活去調整，來達到不用吃藥？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="KZWYUhY4" title="U2FsdGVkX18AWUTvG4TdjPgdRKqcGQaEkcDMLvgDlHi2JEMEKBNZmLhM+o4jJUA77IslCsY5xPRLScF+2JwImUg/f0CLrOm0k5smSR48qBQU3yENoFEIkPRpHfBptHZUn8sAwSCxct1eWIlFzQZ/eqiD6ymO4HJ3tAErGJHoWJbfsUMu9ow4DVATf82MNq7Oy/1/TkSTfBROfPt3LWv01n6ZAMOrnyHJVrA2YUBfdEQ/GBvsl1sWPx1ZJ3J2QHjcVgdPkGyuXhgnt5qJJGjyESa7+JZxNzjlFIGg2aSoHLUDRLSCXAL0PsPnupOAscElduIEQV0oCvLPmpykGcnipGit6pQuZhQQ+nMNharqq2kHQfn7JaKQBH7oUx06R6wg6Y6raKQ391+RVrKbW6801/EXbQRdT8Htprx2gORaYpqE/e6GO3N9L+nkN72KEhSIZbvV2iKce+8cSwumX4ElnchtT7TsBXA3WSpeVUQOySEW17qrRlNkgHL6PLtvmlpCaC7ex2fxAsnMh18pJIaWdiXfE9GZAVliAXANCRakKanp528eoesDGBlWL9yDOhJc8aPf50gt9eaDR1MmjkxL/j/BPGyPADaV3SH4gKyoxf0xjCXr+0Eemrakpnogwy5m99SM2r4/HBeUhITNyNBTLCUz4mYdek0aSOeS2xQ1/79hEo2wOX8TJaBOgoBzJT5lwem9WVUqxXTbzNvfSv9RZArADu1MMx1MQDz89s5qteaJeP9npKZH1Ok/LIPrFm70zqGM6n+wwPPdVHw6cxMVNE799a/CpbgmkXBd2AaLlESNT+FA+ZCmqkltgEevjxIq1ZzsM/KpJPcIYgfRmFtJWxHln8PJcGSn6Gi4s16My2AYhsuVylJyBNzEZg9trFRUBSfLIStJB/UDc16jO/ZCqgsVPtz6pYI4/VdYu9laKg0tkPKzgO61NRpnnkgkS/5QNS3+W8KvdEeZnyTtELYAXozKiHKSsBcEU/cYK2ffVQXv6uPWhx72cEt3EQd1OSdY3Y8YSDmVCb/wnF8DcxW8x2J4/SRCEAaCxPkAMRYxKUqro/SXV9sr0uwip/AIh47FSUccBHj5d/Jhckh1Mw+anYXmwIcgtKdrXMR79qR4DzbGzycZwz4KyEZnLMeTvFZqGPkDxibfqCp05ioNGRiokh3/VFyxAqkQ2OSppMUyNt2R5rijZNlpSI1+2kqnE7qeR2VkzkSQrDnviOTLjZJ+Y5JWvwG0p9w3Uu+DY5P4Add7wulDTboTMrZasr8b9RJeuXwG2NjaaomRDPY9aKfVZY2wVPsJkHQTAqoqVy3ryRNozuD6aV2rbiRmTmisZQQj4aDOu/b+OZp5AlNPU4LtvJ3ZVp1GxMZFLAhL8plhj3uuhbG+aUdkUsnAB2yu+5k7p2j5/KqetknIKL4iC4M3YA==">
+            	<a href="javascript:decryptText('KZWYUhY4')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">那你認為這些藥才可以從健保給付開處方嗎</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="ssDUsmzr" title="U2FsdGVkX1+DWa6rGUMXODuvDdFRUthNfOu7E8ZGZnBhCW0ESIy+CwiBECie0W6JN4uw98CFMQ64mGIR9CZbTt9EdvJ/0BrUOhYeRVNTIa52AB8QS8EJQoizTyZoaFiPoi4EgVITZjgbeupDT2b12u0AGQ0z5uLVjnXk8cY6SNRXoNzjWqpqku6aIeho+SeZHEGX0CTicF29jF8oBe86IhqxaigV0YHiOdrzL/MUDC/ks3hg+6HBLM7WdRhxU9wUbTtoVDvpcZSRnORHYEPo/6yC81sjZi5/rhUF9BpKXGmHC/DKi1AH0txzr1aEifro+p1G83rKZihwzkxd6snN54tcmGo4PGtf6xpXHRkGtsCk/xM4+WsOnqz51BHv6sA36CkqNwYJSmLRDWJUzSvKsF3FqgcMzHKMpadyAdr6h1L6xilRr0WzT0ukBBP4YXi8muyirKg62sE1Kzph6W3v+O7oFa6OqekU/4mh9S8cGt73vxhfAB9dm1iE+tpxr/Ih1f+zujtWprd7tRP5eBk9k4efcxFW56puZVlcTDi4DAfFp47okPuzNuUy7gk3BQ9mf86BxrvcmioJBg02P2W/ccJdUTa87HMw3/pYNLjnGgpxdsxYof0w8iNnH82/WB5LTfdwMFJ8ONbZJ5AJ1DD64+z2Znq6q5m1zFoyNdzCsWTnWBeXmlgqHT80MKmXO6vA">
+            	<a href="javascript:decryptText('ssDUsmzr')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">那你判斷這些藥材，每天定時定量服用，這種療程最好不要超過多少天？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="wuyvgHPT" title="U2FsdGVkX1/pRHcaPut2SHnuJmTGAjxD4DkP7Is1Z/lpsC2VzqxBleZXSX96uOKLfzHsUvThQsBlpqBxzHhJE/6rr8qtUVgZAysydP/FoGYok1z0hE7CYDLZB9ygLEPxk64LUQnziDcUHxwcZJZbb0JCIINDoQZwmERRHeye8F7A8mHtNeveMBJHy2Jd/78oivxjOw5WADo39ayTaOvVSBW4ecT7ZBprNqo3/8oEEs56TIIvaleyHW9VSU6YNipZ2lJMoasNJre/Nj/okhlnsp8K+liEjTMwc3YYxTxzcvdSSPg3CarW+4bxH9mCG9AxOYvwcuysaoTB+Xa8mnLTQXZuEKsDBJOv7x9/biR+gdS8qF4RkRxHRYveFcY2AIcbsHobaxGFCcYJzctDmwRX7HWVhRIWB6JtwKa6t7lDsMT8JHOxfDEh/U8c/6pfREQISNOThadtik7k7qNXl4HPh1pu+Ohd6iwHL9PqHSpCxSutw401wN01YyZF81wSLcsFW6Djn1TGdEsJgfBRqE2zVEHUnlQTpA/sk+SBznVbxXyblp1ZVYL/sRo0GDjcHaGbU2ZNv8vffKUVbxF+FxaeUJX+chVi/sRPDgAAO8k5VFvj6jKSudCOqx2Tu6Zi/MeTImvR6doRlm6QbbZ0w/y9AuToUFS60wNPIyDndaTEUPpkGm+cRFjEbBdjaLauE+R4HFCCOJKjN0THk+xELfFOLaDXGBdb7dpc+9klhu+JBNc6FA1iGwXcc3gwHlM+2LLsq6ubtMr6un6oQ4jKMePFlbaJZp318QMfp48g76Q6VG8ODDnjq3raA8sHD1LlTT3aDOgtuc2LBU7QxYBlrvxHCwSRIvAhddYc4Wb2U+zVCl4pziUo7Q70BosbvJfogYRD">
+            	<a href="javascript:decryptText('wuyvgHPT')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">你會記得有人問過這麼個人化病情的問題嗎</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="1OmCXht3" title="U2FsdGVkX1/SqlYd/+8emJ8+EMb0EmxucHiOM1UO45hxacIbocgf7RUZJzrXwSysABz6sSAranbo7jzEqLOk9yQIsqkhIUt76POroIhAez6Dp/xkPdxktPF0a6fSchA9QDoeRgcwo5aXaB4CBnLfB9aeC0DCrAtuYoV+7lBzWPkKC+TZKngT+ae47L9HVVc5LqWOcpZh5U/UgfnzKhgTuukHIXTjQnJ+EEHhDFhT20g4J4Yg9e6AD6GNlrqbG6J/DPtzhLjHAPplWv7PM6latTzgd350U7w6gxD7yyW4g/APIHTbX/SNqrwx1t+7MNrlg/jakfSd5zhON+MOp4EyBNSXk683VmQxEe68BESW0Zf9gY9nWTOeqeXFNvUgCS8rr6EVUh81XdUCEDK9jGeaSQ==">
+            	<a href="javascript:decryptText('1OmCXht3')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">那在服用這些藥物的療程中，喝咖啡會交互影響嗎</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="8lCgaTWl" title="U2FsdGVkX18rAff0lmuF3Wgem7u1K8+TI78u6sawN1pdZljdBayKiXYeWI8yyWwyPOfuyXZrYdgRtRyvGG5mVSZDma/MeiYXkYd2k6i9PjXK8wXWpk5vK15iKdSyaOaWHZ0bPmJmmjiyQKzwlNTXt15zmh1dJiDKLlvuNzhJ3OtiLYjSm2qAVHONfB1WI3MDbVnzKmy55z9ahojjM4cTfrSHODXXXSF1PtBJDSABevm+tp5hBw7BNxlUotGr+TcpeVOI9pMH+IDeJUpeBYpunTdxlucyPWlLyU0nQvR2DT4OqQCD+TmT5whr8ToRhPqX1otow1nRcF8cK8kJI2tVUKvA9ootsg/NjPEqk2D7IRDm+Y1vaIN/PXPD4eUc06aDqvtI14JdDmX8GVnABrU067WUskGKTCF5FmUwNHKYvx4KuNaJaZsFRnSgIplG28TuCFRdcwR8Bbxht8aVbydUVPRzLqR7HwTOlLbBtipm6ukaVUmaVH+lDYeoUFaptPUhegNVc8bVD0yjCSDqr4TWjjnbnSBo+j+pq/scmEWBi4v2j5usNTPQJvTmGtyK10knPm6BYo1VfQlGYAv/kHV4vqiYKPyojWRSXcJ8Re45ivHK1uCf0W2ghoQZiBQYfsD1YUDUGVpSf3/8jShTiNXHkgMTL0xbgZwcoqRUhs1huTplLSaK63Cs2s1GuLWeNqmECiSiTMtjmTwHOauMCvidmmnarVRgTprq6lPx5aw8i/3W8K0BQUwip5lhSCu1FfUJXAZaAXLXb91KjITca2aBmyHwwmFxhxVfHQ36nmhxmBdSLJdZnD+5h5MoF87XouQFlFxztikVl8RgmzL6qka8m7JbQ6SwmyAr5WRw0k5ciI+gX5PBOODewWtZBNGCWdLqh9MOhZFHUmNL+DlrNoCdyw==">
+            	<a href="javascript:decryptText('8lCgaTWl')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">你認為經過這些中藥材療程，身體體質能夠真正改善嗎？是否會在停藥後，又回到原本的病情？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="psA5YKMO" title="U2FsdGVkX1+afR013agFY7xvn4HR0i8nvyAUoc8eEmeJlrXTl5dPWCrHN/ufDwhytpwL3AIE4oNxOlTuTNQrp3CRccI9IxXflNhJm1vQaFd7H/2FV9+dFj9f97IxWaNi3ITjmjIaa7JQlGkJYL/eORQxkZg30F5SJYU2s/4mJTlrnZ0TgeW1O/QQX8aw9X8Gf+c6yNiAet/Db51ufS3ccFrmu+nmnbMAcPpudHDtH1ZdslE5HBkxcWTE9QoqoXK0HUXxwxfuXVf5IBkErNMr+erzXIJdMl7uzxIp5DrqoklhH98/EardJa9+rHwFY59P2GZow3akmQ7AjHMG6wtlsUngZxXn7NcZbfHDAa1w3dfelVk50g6UsWYOHxQSm7ZiYkm8/yG/ti2cSVnmnpH/RuHPtCvQgcRCRPCdaNZJRZ6SK3+WRrwvHHD2xOx410qAYNP4aowpeicEKFx1VN8cQwiMkRS6LrS+NZz5uDQ5m9/wOzIKM68Mg/eYsdLQFT064RzdQ/0S0DsSylhNfRtKKCR4+IxHf1GF9adVeMSvMB7GHivQCC4gnPgViG+gj/CYIxMASw/W7IQwMT5iRZnkxsVJENuQ0e/MHitQ3xyqRBAuqFpOnND02Q5wVGFRmiZlg0OwlAgXHo99q91i85lNGVx0sbIolK/KKggGrJUkAAMbbjcJCcl1MQlj8oNjpLJicL7fZA4hSkAfkc4A+6DG5nfaF68h0H4ISnMkKtMFZMOT25Og8dJENn0s0LCMZjHG0D6NaMlMYHvcRN8y1kRzLnA6Kk653xuqjBMRmy1V3abDy+9V8yrACxARQGqJDRnCHNJyxqNZkqy903vC4h6bC98zE+9WyFKjY6jnsni/L6qcYDT23Gf5tY+dy0jHXQPVHxNZVBe+pYPPqijrQrNsIBQzawpK6nIflv97wEoTSTWqOf3K4qgGjFQChThLS3cK5kVcmAHD8cmMQyS0ATklRAkbizU9NdOebqY9nM9oxyrqEE9IpTk0IJLNT6ylQL4Eh65uZ7hrF37AqZETCD8U1Q/k/EUq1uawlejONRZFcffauE2wdzskJrxIbU6qjN+nRxNc5rrBxnAAAlFFWUeUoVT3YYJiw0ErFi5t0s46zPQ/h+Jin0kqPuCYIa9TD+Xoi/5kgCSShLQfwpparE6gGQ==">
+            	<a href="javascript:decryptText('psA5YKMO')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">剛剛提到的那些藥材，有涉及到調理月經的部分嗎？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="5sMdvBgV" title="U2FsdGVkX18udBozQhkDVghMjCzx10lULBDHgXp0rkS/EysaM0B/lDonIl7RRpkB1cBvdmg0Mg6clBvFNm//jWbAzJTxQrtBtb2I67s5mKBSIFXyk4La4NhTJs01za6FQPvkpDRnTAADvaONBOo9bMMah0Shr6xPlpLvNEMPmLKbOc34fZ1PUERCRPuiIKJSA5nyuSLC1Kd0CeKkbr7HE8XoPFgEbSGsVrIjHKFYpShvCZJImmKcWwb9ARVXK43o5yJTPu+nVMe9dPC4b8eRRUP0Su1JsXSUc9Px45YF25H3fPnV/B5ts9JkKzCNepfNc8Cp75VWzwORHbE/qvlr8hNx9W2Kr6sNEarfTD40Bih/4FlaV9cHZ9UUfd7Cc8FCaiVvuDVhUBqK3yq8hRljzCM3ZkbhZAk6mU88umQkTP+UIfnKRKGfGiPDinTNEIC7u+lmxVEPrkghl75UupSSdABAgjjfkpETRN0ZPyVBGhxk56yg4UHW61zU1vE1KmBm3ojjDnxFk7EhOch8Pon3dCeDPzkfe6vKiD/d6vzev7kFElXmHBnLfWt9u4FOqMqNWRHRkGazjOi1fgTDw24hV3XaUKwtPKKyepae6ZLxHYwTR4UWhx/ztcHnp1CReEnxUnkBLBSgw6KGCcufO7zCZ5Ppjiwc1VzVf9tsZEnsRvuon/QikQvxS21uRKKp2Cd8TFHTxwmwv0HtCew3eQlj3HiGSSLwx8w2orB6v7ytXnZfHtkpO6lIRQT/QNRESivWVA1DwzRR6wv2yCpWq9gY9z8HGFS7ZMS+kMTllp5DcIVT3/bk6f1r31Y0zU2pSHSWNYt8DnKZzsN19TuVtT4Enl7RYJaxsx5CU1iukv5G8GK6Bw5q2QfaLpB8PfqTiQ/KMKQ0CRXB4ipQg702IjVoBvbg/e6gfy0xlZfaJ1ilvVng1BsFeqHQRnG9Hx/VJUzrKToCJDztAK3uhN5JYMuRaKwAlOaC9pU/Jhqovx6sfC9ISs+qxl9mwMtqBjhGcSqwPDV0hBWuEd1eNvq9kIYgXVmwXROg6S2/lo3+tzi8uTFhunh3qkwI2+whqodpzd/ZFsSBoJjsXNyi5hosXUnKks5m39uRX7RZ+b7CMSY2Te/MuNdwdP5GZlfTFX1udXVmptwRQ1Oc+mgpqAKTyQSVNw4ioqa7ZpMF+mllOHhiTUp6xvEWAvuFAUXa+dx1NO9IY2hlMxWqHWXo2XybkYmj64MsGrCCpHHJGtFyO+9RAaxWGBs24sQr+VfpvRBTddg0cxwL7yAfCQ0Y3UDaUTEWoUl04DkO/Mpx+/a93Qi+jf9HgPv0hMwbvE5Fjg5JAdfMHWsNJnQuNJUO928G9rNMdUv7bhJBb7DewGx8/+nZuUM=">
+            	<a href="javascript:decryptText('5sMdvBgV')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">剛剛提到的那些藥材，有涉及到治療臉部頻繁復發的痤瘡的部分嗎？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="gX8WEup2" title="U2FsdGVkX18pSv+h39v9dai5Q2m2eCZH9jPuSItyyZzVdDRHHdc/gIdccijNHwk270gLGUjshgHYUQyNeWQkUmOz7F5pJnNStwnHq3IQ8eYAokEzvMp0RyVN3BzGKfdTZvsBOhIOHM73+ILlKaxX+hXCYNlhWa0A46T159o9E/gAaG9IdIqs20/ADA88yBCv/Fo9sNNoQBlLAVzkYM+y0QGB58NbnGMGykCv0h7jrQgpPyaPLqJR5YBMvWAb0o9vszgW+lYiMa//SE9c3XN+gj9ZbrQ8+uVTqXnTtD5dPouas46BCEFudq2UwHYY63QYHMfvhEgrecq4nJiWoLIA9kp7chPC0gGij8JCZuaKCjj7yrH4fz3jdLuADdXFw6XBvwHd7Yz405v5dfHMVdRfS/KHwGPJkJgHkweqcQVfx9uCjBlMZXXg079JjCBEMrUNj84Tl0szQWIenTCe1ZrPkkC7YRAPNeiD0BY+IYlkZQD2gDEZbraMvFkjGlOT2gnuv/2+a8dD3wp8m54rR2vzfwu7f+yzd8wL3nVq2PR6vK1iirs8UsRu/cRiEpDW2KWSTcYjNUgPLv/lmZKe+TCBKS/KQkkvcGDlnkuDcoK2YGeMKWDfKbHFX7QJVRh7oKnkAamR9A8s/KJicgKbE1g5QpxL15kwWQpwlg2aMz3e6rTGs4d9QR8dNx6rJ2RVRd29SS3oweUhIVXwB8rwXIE397tj0QujtvYGER9XUA/X8NlALe2n+A27tc13/ZWQEn2gDkZndtfknucuzyj6bhqUgQ==">
+            	<a href="javascript:decryptText('gX8WEup2')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+
+    <p>
+      <div class="dialogue">
+        
+        <div class="user local">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=1" />
+            </div>
+            <div class="name">Q</div>
+          </div>
+          <div class="text">那你覺得會開這些藥方的中醫師，診斷功力和執醫閱歷大概如何？</div>
+        </div>
+        
+        <div class="user remote">
+          <div class="avatar">
+            <div class="pic">
+              <img src="https://picsum.photos/100/100?random=2" />
+            </div>
+            <div class="name">A</div>
+          </div>
+          <div class="text">
+            <div id="YE6XXVVv" title="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">
+            	<a href="javascript:decryptText('YE6XXVVv')">查看加密內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+    
+  </body>
+</html>
